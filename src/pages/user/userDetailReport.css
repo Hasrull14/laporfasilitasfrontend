@@ -1,0 +1,83 @@
+.report-detail-container {
+  padding: 24px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #667eea;
+  font-weight: 500;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+.report-card {
+  background: white;
+  max-width: 800px;
+  margin-top: 16px;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.report-card h2 {
+  margin-bottom: 12px;
+}
+
+.meta {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  background: #edf2ff;
+  color: #4c51bf;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.status.baru {
+  background: #3182ce;
+}
+
+.status.diproses {
+  background: #dd6b20;
+}
+
+.status.selesai {
+  background: #38a169;
+}
+
+.location {
+  color: #555;
+  font-size: 14px;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.reporter p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.loading,
+.not-found {
+  padding: 24px;
+  font-size: 16px;
+}
