@@ -23,7 +23,7 @@ export default function Register() {
       await api.post("/auth/register", register);
       navigate("/");
     } catch (error) {
-      setError("Masukkan Data dengan Benar!");
+      setError(error.message);
       console.log(error);
     } finally {
       setLoading(false);
@@ -37,15 +37,18 @@ export default function Register() {
         {error && <p className="error">{error}</p>}
 
         <input
+          required
           placeholder="Name"
           onChange={(e) => setRegister({ ...register, name: e.target.value })}
         />
         <input
+          required
           type="email"
           placeholder="Email"
           onChange={(e) => setRegister({ ...register, email: e.target.value })}
         />
         <input
+          required
           placeholder="Password"
           onChange={(e) =>
             setRegister({ ...register, password: e.target.value })
@@ -53,6 +56,7 @@ export default function Register() {
         />
 
         <select
+          required
           onChange={(e) => setRegister({ ...register, role: e.target.value })}
         >
           <option aria-readonly>Pilih Role</option>
@@ -64,10 +68,9 @@ export default function Register() {
           {loading ? "Register in..." : "Register"}
         </button>
         <p className="text-center">
-        Already Have Account <Link to={"/"}>Login</Link>
-      </p>
+          Already Have Account <Link to={"/"}>Login</Link>
+        </p>
       </form>
-      
     </div>
   );
 }
