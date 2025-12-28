@@ -23,8 +23,8 @@ export default function Register() {
       await api.post("/auth/register", register);
       navigate("/");
     } catch (error) {
-      setError(error.message);
-      console.log(error);
+      const message = error.response?.data?.message || "Registrasi gagal";
+      setError(message);
     } finally {
       setLoading(false);
     }
