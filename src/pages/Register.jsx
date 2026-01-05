@@ -55,12 +55,14 @@ export default function Register() {
           }
         />
 
-        <select
-          required
-          onChange={(e) => setRegister({ ...register, role: e.target.value })}
-        >
-          <option aria-readonly value="user">User</option>
-        </select>
+        <input
+          readOnly
+          value="user"
+          placeholder="User"
+          onChange={(e) =>
+            setRegister({ ...register, role: e.target.value })
+          }
+        />
 
         <button disabled={loading}>
           {loading ? "Register in..." : "Register"}
