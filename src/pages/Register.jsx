@@ -7,8 +7,7 @@ export default function Register() {
   const [register, setRegister] = useState({
     name: "",
     email: "",
-    password: "",
-    role: "",
+    password: ""
   });
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -49,18 +48,10 @@ export default function Register() {
         />
         <input
           required
+          type="password"
           placeholder="Password"
           onChange={(e) =>
             setRegister({ ...register, password: e.target.value })
-          }
-        />
-
-        <input
-          readOnly
-          value="user"
-          placeholder="User"
-          onChange={(e) =>
-            setRegister({ ...register, role: e.target.value })
           }
         />
 
