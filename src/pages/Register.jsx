@@ -59,9 +59,7 @@ export default function Register() {
           required
           onChange={(e) => setRegister({ ...register, role: e.target.value })}
         >
-          <option aria-readonly>Pilih Role</option>
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
+          <option aria-readonly value="user">User</option>
         </select>
 
         <button disabled={loading}>
